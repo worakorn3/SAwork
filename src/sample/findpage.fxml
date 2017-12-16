@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FindpageController">
+   <children>
+      <Button fx:id="BackButton" layoutX="40.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="32.0" prefWidth="79.0" text="Back" />
+      <TextField layoutX="231.0" layoutY="11.0" prefHeight="25.0" prefWidth="340.0" promptText="Text to find" />
+      <Button fx:id="submitBtn" layoutX="248.0" layoutY="62.0" mnemonicParsing="false" onAction="#submitBtnAction" text="Search" />
+      <TableView editable="true" layoutX="40.0" layoutY="96.0" prefHeight="236.0" prefWidth="533.0">
+        <columns>
+            <TableColumn fx:id="IDColum" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="TypeColum" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="CompNameColum" prefWidth="120.0" text="Company Name" />
+            <TableColumn fx:id="CompIDColum" prefWidth="138.0" text="Company ID" />
+            <TableColumn fx:id="dateColum" prefWidth="69.0" text="Date" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="name" layoutX="83.0" layoutY="6.0" mnemonicParsing="false" text="Company name">
+         <toggleGroup>
+            <ToggleGroup fx:id="NameorID" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ID" layoutX="83.0" layoutY="28.0" mnemonicParsing="false" text="Company ID" toggleGroup="$NameorID" />
+      <RadioButton fx:id="date" layoutX="83.0" layoutY="46.0" mnemonicParsing="false" text="Date" toggleGroup="$NameorID" />
+      <RadioButton fx:id="poOrsoID" layoutX="150.0" layoutY="46.0" mnemonicParsing="false" text="PO/SO ID" toggleGroup="$NameorID" />
+      <Button fx:id="detailBtn" layoutX="334.0" layoutY="62.0" mnemonicParsing="false" onAction="#detailBtnAction" text="Detail" />
+   </children>
+</AnchorPane>

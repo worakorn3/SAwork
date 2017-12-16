@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SOpageController">
+   <children>
+      <TextField layoutX="100.0" layoutY="135.0" promptText="เลข SO" />
+      <TextField layoutX="400.0" layoutY="135.0" prefHeight="25.0" prefWidth="175.0" promptText="CompanyID" />
+      <Button layoutX="90.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="100.0" prefWidth="120.0" text="Back" />
+      <Button layoutX="600.0" layoutY="450.0" mnemonicParsing="false" onAction="#submitBtnAction" prefHeight="100.0" prefWidth="120.0" text="Submit" />
+      <TextField layoutX="100.0" layoutY="230.0" prefHeight="25.0" prefWidth="270.0" promptText="E-mail" />
+      <DatePicker layoutX="400.0" layoutY="230.0" promptText="Date" />
+      <Button fx:id="CheckBtn" layoutX="640.0" layoutY="90.0" mnemonicParsing="false" onAction="#checkBtnAction" prefHeight="100.0" prefWidth="100.0" text="Check" />
+      <RadioButton fx:id="name" layoutX="640.0" layoutY="50.0" mnemonicParsing="false" selected="true" text="Name">
+         <toggleGroup>
+            <ToggleGroup fx:id="NameID" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="ID" layoutX="700.0" layoutY="50.0" mnemonicParsing="false" text="ID" toggleGroup="$NameID" />
+      <TextArea layoutX="400.0" layoutY="300.0" prefHeight="80.0" prefWidth="340.0" />
+      <Label layoutX="100.0" layoutY="275.0" prefHeight="25.0" prefWidth="163.0" text="Term payment" textAlignment="JUSTIFY" />
+      <RadioButton fx:id="halfmonth" layoutX="100.0" layoutY="330.0" mnemonicParsing="false" text="15 Day">
+         <toggleGroup>
+            <ToggleGroup fx:id="termpayment" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="month" layoutX="100.0" layoutY="360.0" mnemonicParsing="false" text="30 Day" toggleGroup="$termpayment" />
+      <RadioButton fx:id="imm" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" selected="true" text="Immediate" toggleGroup="$termpayment" />
+      <Label layoutX="393.0" layoutY="208.0" prefHeight="25.0" prefWidth="27.0" text="Date" textAlignment="JUSTIFY" />
+      <Label layoutX="393.0" layoutY="114.0" prefHeight="25.0" prefWidth="163.0" text="Company ID/Company Name" textAlignment="JUSTIFY" />
+      <Label layoutX="94.0" layoutY="118.0" text="SO number" />
+      <Label layoutX="90.0" layoutY="212.0" text="E-mail" />
+   </children>
+</AnchorPane>
